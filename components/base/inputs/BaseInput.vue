@@ -1,9 +1,10 @@
-<template>
-  <input
+<template lang="pug">
+  input(
     :value="inputValue"
     ref="input"
     @input="setValue"
-  />
+  )
+
 </template>
 
 <script lang="ts">
