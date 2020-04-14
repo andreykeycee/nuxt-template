@@ -12,7 +12,13 @@ import { numberFromString } from '@/helpers/numbers'
   components: { BaseInput }
 })
 export default class index extends Vue {
-  value = 'hello world'
   filter = numberFromString
+
+  get value () {
+    return this.$store.state.value
+  }
+  set value (value: any) {
+    this.$store.commit('input', value)
+  }
 }
 </script>
